@@ -2,20 +2,20 @@
 
 ## create a matrix 
 
-makeCacheMatrix <- function(x = numeric()) {
-  m <- NULL
+makeCacheMatrix <- function(x = matrix()) {
+  i <- NULL
   set <- function(y) {
     x <<- y
-    m <<- NULL
+    i <<- NULL
   }
   get <- function() x
-  setmean <- function(mean) m <<- mean
-  getmean <- function() m
-  list(set = set, get = get,
-       setmean = setmean,
-       getmean = getmean)
+  setinverse <- function(inverse) i <<- inverse
+  getinverse <- function() i
+  list(set = set,
+       get = get,
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
-
 
 ## computes the inverse of the matrix
 
